@@ -81,7 +81,7 @@
 	echo "<hr>";
 
 	//increment / decrement
-	//tambah 1 / kurang 1.
+	//tambah 1 / kurang 1
 	//(++),(--)
 	$x = 10;
 	++$x;
