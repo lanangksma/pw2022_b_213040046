@@ -19,10 +19,7 @@ echo "<hr>";
 
 // Deklarasi / Defijisi function
 function totalVolumeDuaKubus($a, $b) {
-
-    $volume_a = pow($a, 3);
-    $volume_b = pow($b, 3);
-    $total = $volume_a + $volume_b;
+    $total = pow($a, 3) + pow($b, 3);
 
     return "Jumlah dari volume kubus dengan sisi $a dan kubus dengan sisi $b adalah $total <br>";
 }
