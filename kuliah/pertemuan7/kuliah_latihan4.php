@@ -20,8 +20,7 @@ $mahasiswa = [
         "email" => "rifialdi@gmail.com",
         "jurusan" => "Teknik Informatika",
         "gambar" => "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.TKA6_q4VF_RWunSvxmP8VgHaHa%26pid%3DApi&f=1"
-    ],
-
+    ]
 ];
 
 ?>
