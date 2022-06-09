@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 include ('includes/header.php');
 include ('includes/navbar.php');
 ?>
@@ -11,8 +11,8 @@ include ('includes/navbar.php');
 
             <?php include ('message.php'); ?>
 
-                <h3>Assu</h3>
-                <button class="btn btn-primary">Login</button>
+                <h3>Mabar</h3>
+                
             </div>
         </div>
     </div>

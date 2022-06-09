@@ -25,6 +25,20 @@
                         <a class="nav-link" href="category-view.php">View Category</a>
                     </nav>
                 </div>
+
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePosts" aria-expanded="false" aria-controls="collapsePosts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    Posts
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+
+                <div class="collapse" id="collapsePosts" aria-labelledby="Posts" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="post-add.php">Add Post</a>
+                        <a class="nav-link" href="post-view.php">View Posts</a>
+                    </nav>
+                </div>
+
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                     Pages

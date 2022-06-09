@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include ('admin/config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,7 @@
     <title>Geek To Code</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/custom.js">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
 </head>
 <body>

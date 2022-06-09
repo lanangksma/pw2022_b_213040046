@@ -1,18 +1,49 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<div>
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="row">
+      <div class="col-4">
+        <a class="blog-header-logo text-primary" href="index.php">Geek to Code</a>
+      </div>
+      <div class="col-md-9">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+  <div class="container">
+    <a class="navbar-brand d-block d-sm-none d-md-none" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+        <?php 
+          $navbar_category = "SELECT * FROM categories WHERE navbar_status='0' AND status='0' ";
+          $navbar_category_run = mysqli_query($conn, $navbar_category);
+
+          if(mysqli_num_rows($navbar_category_run) > 0)
+          {
+            foreach($navbar_category_run as $navitems)
+            {
+              ?>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="category.php?title=<?= $navitems['slug']; ?>"><?= $navitems['name']; ?></a>
+                </li>
+              <?php
+            }
+          }
+        ?>
+        
 
         <?php if(isset($_SESSION['auth_user'])) : ?>
 
