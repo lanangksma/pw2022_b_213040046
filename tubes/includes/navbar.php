@@ -15,7 +15,7 @@
 
 
 
-<nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand d-block d-sm-none d-md-none" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
