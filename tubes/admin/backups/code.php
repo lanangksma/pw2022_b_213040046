@@ -271,9 +271,6 @@ if(isset($_POST['add_user']))
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    // Hash
-    $password = md5($password);
-
     $role_as = $_POST['role_as'];
     $status = $_POST['status'] == true ? '1':'0';
 
@@ -301,13 +298,10 @@ if(isset($_POST['update_user']))
     $user_id = $_POST['user_id'];
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    // Hash
-    $password = md5($password);
     $role_as = $_POST['role_as'];
     $status = $_POST['status'] == true ? '1':'0';
 
-    $query = "UPDATE user SET username='$username', email='$email', password='$password', role_as = '$role_as', status='$status'
+    $query = "UPDATE user SET username='$username', email='$email', role_as = '$role_as', status='$status'
               WHERE id='$user_id' ";
     $query_run = mysqli_query($conn, $query);
 

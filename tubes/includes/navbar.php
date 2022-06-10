@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-4">
-        <a class="blog-header-logo text-primary" href="index.php">Geek to Code</a>
+        <a class="blog-header-logo text-primary d-none d-sm-none d-md-block" href="<?= base_url('index'); ?>">Geek to Code</a>
       </div>
       <div class="col-md-9">
 
@@ -17,7 +17,9 @@
 
 <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand d-block d-sm-none d-md-none" href="#"></a>
+    <a class="navbar-brand d-block d-sm-block d-md-none" href="<?= base_url('index'); ?>">
+    Geek to Code
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,7 +27,7 @@
         
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="<?= base_url('index'); ?>">Home</a>
         </li>
         <?php 
           $navbar_category = "SELECT * FROM categories WHERE navbar_status='0' AND status='0' ";
@@ -37,7 +39,9 @@
             {
               ?>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="category.php?title=<?= $navitems['slug']; ?>"><?= $navitems['name']; ?></a>
+                  <!-- <a class="nav-link text-white" href="category.php?title=<?= $navitems['slug']; ?>"><?= $navitems['name']; ?></a> -->
+
+                  <a class="nav-link text-white" href="<?= base_url('category/'.$navitems['slug']); ?>"><?= $navitems['name']; ?></a>
                 </li>
               <?php
             }
@@ -52,10 +56,10 @@
             <?= $_SESSION['auth_user']['user_name']; ?>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">My Profile</a></li>
+
             <li>
-              <form action="allcode.php" method="POST">
-                <button type="submit" name="logout_btn" class="dropdown-item" >Sign-Out</button>
+              <form action="<?= base_url('allcode.php'); ?>" method="POST">
+                <button type="submit" name="logout_btn" class="dropdown-item" ><i class="fa fa-sign-out"></i> Sign-Out</button>
               </form>
             </li>
           </ul>
@@ -64,7 +68,7 @@
         <?php else : ?>
 
         <li class="nav-item">
-          <a class="nav-link" href="register.php">Sign-up</a>
+          <a class="nav-link" href="<?= base_url('register.php'); ?>">Sign-up</a>
         </li>
 
         <?php endif; ?>

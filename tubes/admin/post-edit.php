@@ -99,6 +99,7 @@ include('include/header.php');
                                         <div class="col-md-6 mb-3">
                                             <label for="">Status</label> <br />
                                             <input type="checkbox" name="status" <?= $row['status'] == '1' ? 'checked':'' ?> width="70px" height="70px" />
+                                            Hidden
                                         </div>
                                         <div class="col-md-12 mb-3">
                                             <button type="submit" name="post_update" class="btn btn-primary">Update Post</button>

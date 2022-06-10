@@ -1,11 +1,11 @@
-<div class="py-3 bg-dark">
+<footer class="py-3 mt-5 bg-dark">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <h3 class="text-white">Geek To Code</h3>
                 <div class="underline mb"></div>
-                <div><a href="#home text-decoration-none" class="text-white">Home</a></div>
-                <div><a href="#about text-decoration-none" class="text-white">About Us</a></div>
+                <div><a href="#home" class="text-white text-decoration-none">Home</a></div>
+                <div><a href="#about" class="text-white text-decoration-none">About Us</a></div>
             </div>
             <div class="col-md-4">
                 <h3 class="text-white">Contact Us</h3>
@@ -15,12 +15,12 @@
             </div>
         </div>
     </div>
-</div>
+</footer>
 
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap5.bundle.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+<script src="<?= base_url('assets/js/jquery.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/bootstrap5.bundle.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/scripts.js'); ?>"></script>
 
 </body>
 

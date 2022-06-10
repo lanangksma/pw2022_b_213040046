@@ -1,5 +1,6 @@
 <?php
 include('authentication.php');
+include('sudo/sudoAuth.php');
 include('include/header.php');
 ?>
 

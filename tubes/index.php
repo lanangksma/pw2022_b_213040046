@@ -1,10 +1,16 @@
 <?php 
 
+include ('includes/conf.php');
+
+$page_title="Home";
+$meta_description="This is a Home Page.";
+$meta_keywords="Home page";
+
 include ('includes/header.php');
 include ('includes/navbar.php');
 ?>
 
-<div class="py-5 bg-dark">
+<div class="py-5 bg-dark" id="home">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -23,7 +29,7 @@ include ('includes/navbar.php');
                     {
                     ?>
                         <div class="col-md-3 mb-4">
-                            <a class="text-decoration-none" href="category.php?title=<?= $homeitem['slug']; ?>">                   
+                            <a class="text-decoration-none" href="<?= base_url('category/'.$homeitem['slug']); ?>">                   
                                 <div class="card card-body">
                                     <?= $homeitem['name']; ?>
                                 </div>
@@ -47,7 +53,7 @@ include ('includes/navbar.php');
                 <?php include ('message.php'); ?>
                 <h3 class="text-dark">Geek To Code</h3>
                 <div class="underline mb"></div>
-                <p>
+                <p id="about">
                     is a website that was built because of the importance of tubes by lanangksma, hopefully this website can be a website that gets a good impression and has benefits in it. And also this website contains a variety of tutorials on programming, Linux and the like.
                 </p>
             </div>
@@ -75,7 +81,7 @@ include ('includes/navbar.php');
                         {
                         ?>
                             <div class="mb-4">
-                                <a class="text-decoration-none" href="post.php?title=<?= $homePostsitem['slug']; ?>">                   
+                                <a class="text-decoration-none" href="<?= base_url('post/'.$homePostsitem['slug']) ?>">                   
                                     <div class="card card-body bg-light">
                                         <?= $homePostsitem['name']; ?>
                                     </div>

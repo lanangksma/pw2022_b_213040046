@@ -22,7 +22,7 @@ include('include/header.php');
                 <div class="card-body">
 
                 <table class="table-responsive">
-                    <table class="table table-bordered table-striped">
+                    <table id="myTable" class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -56,7 +56,7 @@ include('include/header.php');
                                                 </td>
                                                 <td>
                                                     <form action="code.php" method="POST">
-                                                        <button type="submit" name="post_delete_btn" value="<?= $post['id']; ?>" class="btn btn-danger">
+                                                        <button type="submit" name="post_delete_btn" value="<?= $post['id']; ?>" onclick="return confirm('Sure?');" class="btn btn-danger">
                                                             Delete
                                                         </button>
                                                     </form>

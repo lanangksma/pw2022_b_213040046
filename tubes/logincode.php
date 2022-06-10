@@ -1,12 +1,13 @@
 <?php 
-session_start();
-include('admin/config/dbcon.php');
+include ('includes/conf.php');
 
 // Check if button ready
 if(isset($_POST['login_btn']))
 {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
+    // Hash
+    $password = md5($password);
 
     $login_query = "SELECT * FROM user WHERE email='$email' AND password='$password' LIMIT 1 ";
     $login_query_run = mysqli_query($conn, $login_query);
@@ -30,13 +31,25 @@ if(isset($_POST['login_btn']))
             'user_email' => $user_email,
         ];
         // Multi level login
-        if($_SESSION['auth_role'] == '1') //Logged as Admin
+        if($_SESSION['auth_role'] == '1' ) //Logged as Admin or SUDO
         {
             $_SESSION['message'] = "You're Logged as Admin.";
             header("Location: admin/index.php");
             exit(0); 
         }
+        if($_SESSION['auth_role'] == '2' ) //Logged as Admin or SUDO
+        {
+            $_SESSION['message'] = "You're Logged as SUDO.";
+            header("Location: admin/index.php");
+            exit(0); 
+        }
         elseif($_SESSION['auth_role'] == '0') //Logged as user
+        {
+            $_SESSION['message'] = "You're Logged in.";
+            header("Location: index.php");
+            exit(0);
+        }
+        else
         {
             $_SESSION['message'] = "You're Logged in.";
             header("Location: index.php");

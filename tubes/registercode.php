@@ -1,7 +1,5 @@
 <?php 
-session_start();
-// Set up database connection
-include ('admin/config/dbcon.php');
+include ('includes/conf.php');
 
 // Check if button ready
 if(isset($_POST['register_btn']))
@@ -9,7 +7,12 @@ if(isset($_POST['register_btn']))
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
+    // Hash
+    $password = md5($password);
     $confirm_password = mysqli_real_escape_string($conn, $_POST['cpassword']);
+    // Hash
+    $confirm_password = md5($confirm_password);
+    
 
     // Check password confirmation
     if($password == $confirm_password)

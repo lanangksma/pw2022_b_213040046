@@ -1,4 +1,11 @@
 <?php
+
+include ('includes/conf.php');
+
+$page_title="Login";
+$meta_description="This is a Login Page.";
+$meta_keywords="Login page";
+
 include('includes/header.php');
 
 // Check if user already login
@@ -43,7 +50,7 @@ include('includes/navbar.php');
                 </form>
                 <hr class="mt-4">
                 <div class="col-12">
-                    <p class="text-center mb-0">Have not account yet? <a href="register.php">Signup</a></p>
+                    <p class="text-center mb-0">Have not account yet? <a href="<?= base_url('register.php') ?>">Signup</a></p>
                 </div>
             </div>
         </div>

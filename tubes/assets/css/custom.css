@@ -18,3 +18,9 @@
     background-color: red;
     margin-bottom: 20px;
 }
+
+@media (max-width: 1000px) {
+    .blog-header-logo {
+        font-size: 2rem;
+    }
+}

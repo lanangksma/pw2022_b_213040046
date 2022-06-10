@@ -11,7 +11,7 @@ if(!isset($_SESSION['auth']))
 }
 else
 {
-    if($_SESSION['auth_role'] != "1")
+    if($_SESSION['auth_role'] != "1" &&  $_SESSION['auth_role'] != "2" )
     {
         $_SESSION['message'] = "You aren't authorize as ADMIN.";
         header("Location: ../");

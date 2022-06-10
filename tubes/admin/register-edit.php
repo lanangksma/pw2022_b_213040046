@@ -1,5 +1,6 @@
 <?php
 include('authentication.php');
+include('sudo/sudoAuth.php');
 include('include/header.php');
 ?>
 
@@ -45,6 +46,10 @@ include('include/header.php');
                                     <div class="col-md-6 mb-3">
                                         <label for="">Email</label>
                                         <input type="text" name="email" value="<?= $user['email']; ?>" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="">Password</label>
+                                        <input type="password" name="password" class="form-control">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="">Role as</label>

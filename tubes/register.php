@@ -1,4 +1,11 @@
 <?php
+
+include ('includes/conf.php');
+
+$page_title="Register";
+$meta_description="This is a Register Page.";
+$meta_keywords="Register page";
+
 include('includes/header.php');
 
 if(isset($_SESSION['auth']))
@@ -20,7 +27,7 @@ include('includes/navbar.php');
         <?php include ('message.php'); ?>
 
             <div class="login-form bg-light mt-4 p-4">
-                <form action="registercode.php" method="POST" class="row g-3">
+                <form action="<?= base_url('registercode.php'); ?>" method="POST" class="row g-3">
                     <h4>Register</h4>
                     <div class="col-12">
                         <label>Username</label>
@@ -44,7 +51,7 @@ include('includes/navbar.php');
                 </form>
                 <hr class="mt-4">
                 <div class="col-12">
-                    <p class="text-center mb-0">Already Have account yet? <a href="login.php">Login</a></p>
+                    <p class="text-center mb-0">Already Have account yet? <a href="<?= base_url('login.php'); ?>">Login</a></p>
                 </div>
             </div>
         </div>
